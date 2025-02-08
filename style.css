@@ -8,12 +8,12 @@
 body{
     height: 100vh;
     box-sizing: border-box;
-    background-color: #000000;
-    color: #F6F6F6;
+    background-color: rgb(209, 209, 209);
+    color: #000000;
 }
 
 .titulo-destaque{
-    color: #22D4FD;
+    color: rgb(208, 255, 0);
 }
 
 .apresentacao{
@@ -39,13 +39,20 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.apresentacao__links{
+.apresentacao__links {
     display: flex;
     justify-content: space-between;
 }
 
-.apresentacao__links__link{
-    background-color: #22D4FD;
+.redes {
+    /* subtitulo */
+    font-family: 'Krona One', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.apresentacao__links__link {
+    /*background-color: rgb(208, 255, 0);*/
     width: 280px;
     text-align: center;
     border-radius: 16px;
@@ -55,4 +62,57 @@ body{
     text-decoration: none;
     color: #000000;
     font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgb(208, 255, 0), 0 0 20px rgb(208, 255, 0), 0 0 40px rgb(208, 255, 0);
+}
+
+/* Efeito de hover */
+.apresentacao__links__link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #fd22fd, 0 0 30px #fd22fd, 0 0 60px #fd22fd;
+}
+
+/* Efeito de brilho fluido */
+.apresentacao__links__link::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+   /*
+    background-size: 300%;
+    z-index: -1;
+    filter: blur(1px);
+    animation: neonFlow 5s infinite linear;*/
+    border-radius: 10px;
+}
+
+/* Animação do brilho fluido */
+/*@keyframes neonFlow {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}*/
+.imagem{
+    width: 600px;
+    /* Ajusta o tamanho */
+    height: auto;
+    border: 5px solid rgb(208, 255, 0);
+    /* Borda azul clara */
+    border-radius: 5px;
+    /* Bordas levemente arredondadas */
+    box-shadow: 10px 10px 15px rgba(187, 253, 34, 0.5);
+    /* Sombra suave azul */
+
 }
