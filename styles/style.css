@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(209, 209, 209);
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.titulo-destaque {
+    color: rgb(208, 255, 0);
+}
+
+/* Estiliza o cabeçalho */
+.cabecalho {
+    background: linear-gradient(90deg, #ffffff, rgba(208, 255, 0, 0.247));
+    /* Gradiente bra */
+    padding: 20px 0;
+    /* Espaço interno */
+}
+
+/* Estiliza o menu */
+.cabecalho__menu {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os itens no cabeçalho */
+    align-items: center;
+    gap: 20px;
+    /* Espaçamento entre os links */
+}
+
+/* Estiliza os links */
+.cabecalho__menu__link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    /* Cor do texto */
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    /* Alinha o ícone e o texto */
+    gap: 10px;
+    /* Espaço entre o ícone e o texto */
+    transition: 0.3s;
+}
+
+/* Efeito hover */
+.cabecalho__menu__link:hover {
+    color: #fd22fd;
+    /* Muda a cor ao passar o mouse */
+}
+
+/* Ajuste nos ícones */
+.cabecalho__menu__link i {
+    font-size: 20px;
+    /* Tamanho dos ícones */
+}
+
+.apresentacao {
+    margin: 5% 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.apresentacao__conteudo {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 32px;
+    font-family: 'Krona One', sans-serif;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 20px;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.apresentacao__links__link {
+    width: 260px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgb(208, 255, 0);
+    background: linear-gradient(135deg, rgb(208, 255, 0), #fd22fd);
+}
+
+.apresentacao__links__link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #fd22fd;
+}
+
+.imagem img {
+    width: 100%;
+    max-width: 300px;
+    margin: 50px;
+    border: 5px solid rgb(208, 255, 0);
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgba(187, 253, 34, 0.5);
+}
+
+.rodape {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: linear-gradient(135deg, rgb(208, 255, 0) 20%, white 50%, #fd22fd 80%);
+    background-size: 200% 200%;
+    animation: gradientShift 8s infinite alternate ease-in-out;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apresentacao__conteudo {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .apresentacao__links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
