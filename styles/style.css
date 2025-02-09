@@ -20,21 +20,19 @@ body {
 /* Estiliza o cabeçalho */
 .cabecalho {
     background: linear-gradient(90deg, #ffffff, rgba(208, 255, 0, 0.247));
-    /* Gradiente bra */
+    /* Gradiente branco e verde */
     padding: 20px 0;
     /* Espaço interno */
 }
-
 /* Estiliza o menu */
 .cabecalho__menu {
-    display: flex;
-    justify-content: center;
     /* Centraliza os itens no cabeçalho */
-    align-items: center;
-    gap: 20px;
+    display: flex;
+    margin-left: 20px;
+    justify-content: left;
     /* Espaçamento entre os links */
+    gap: 20px;
 }
-
 /* Estiliza os links */
 .cabecalho__menu__link {
     text-decoration: none;
